@@ -24,10 +24,16 @@ function App() {
     },
   ];
 
+  const addexpense =(ex)=>{
+     return expenses.push(ex);
+  };
+  
+  console.log(expenses);
+
   return (
     <div>
       <h2>Let's get started!</h2>
-      <NewExpense/>
+      <NewExpense expense={addexpense}/>
       <Expense expenses={expenses}/>
     </div>
   );
