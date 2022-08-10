@@ -25,15 +25,16 @@ function App() {
   ];
 
   const addexpense =(ex)=>{
-     return expenses.push(ex);
+     console.log('In App.js');
+     console.log(ex);
   };
   
-  console.log(expenses);
+
 
   return (
     <div>
       <h2>Let's get started!</h2>
-      <NewExpense expense={addexpense}/>
+      <NewExpense onAddExpense={addexpense}/>
       <Expense expenses={expenses}/>
     </div>
   );
